@@ -4,6 +4,7 @@ import pytest
 @pytest.fixture(scope='function')
 def setup_browser():
     browser.open('https://school.qa.guru/cms/system/login')
+    browser.driver.set_window_size(375, 700)
     yield
     browser.quit()
 
